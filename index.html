@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mndeni Magagula - Front-end Developer</title>
+    <title>Mndeni Magagula &mdash; Front-End Developer - South Africa, Durban</title>
+    <meta name="language" content="en" />
+    <meta name="description" content="Front-End Developer - South Africa, Durban" />
+    <meta name="keywords" content="front-end web developer, HTML, CSS, SVG, UI, UX, a11y, Durban developer, front-end developer durban, mndeni magagula" />
+
+    <meta property="og:url" content="www.sarasoueidan.com" />
+    <meta property="og:title" content="Mndeni Magagula — Front-End Developer" />
+    <meta property="og:type" content="website" />
+
+    <meta content="Welcome to Mndeni Magagula's Web site." name="description" />
+
     <link rel="stylesheet" href="assets/css/portfolio.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="shortcut icon" href="assets/img/logo.png">
     
 </head>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 124" width="70px" height="70px">
+    <svg xmlns="http://www.w3.org/2000/svg" class="logo" viewBox="0 0 124 124" width="70px" height="70px">
         <defs>
             <style>
                 .cls-1 { fill:#a03131; }
@@ -29,12 +40,16 @@
     </svg>
     <div class="focus">
         <h1>Mndeni <br> Magagula.</h1>
-        <div class="socials">
-            <!-- <a href="#"><i class="fab fa-codepen"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a> -->
-            <a href="#">View work</a>
+    </div>
+    <div class="toggleContainer">
+        <label id="adjust"><i class="fas fa-adjust"></i></label>
+        <button role="switch" aria-checked="true" aria-labelledby="adjust" class="toggle">
+            <span>Dark</span>
+            <span>Light</span>
+        </button>
+
+        <div class="reach">
+            <a href="#"><span>+</span> Reach out</a>
         </div>
     </div>
     <div class="about">
@@ -51,8 +66,7 @@
         </p>
 
         <p>
-            My goal is to combine my technical and creative abilities and make the web an even friendlier place. 
-            I love exploring new realms of modern tech and diving deep into fascinating projects. My love for learning
+            My goal is to combine my technical and creative abilities and make the web an even friendlier place. My love for learning
             helps me dive deeper into front-end technologies. Here is my <a href="resume.pdf" target="blank">resume</a>.
         </p>
 
@@ -60,6 +74,74 @@
             I look forward to being part of a team that supports each other and strives to create 
             amazing things!
         </p>
+
+        <div class="work">
+            <a href="#" class="work__image bg2">
+                <img src="assets/img/page.jpg" alt="page">
+                <i class="fas fa-link"></i>
+            </a>
+            <div class="work__content">
+                <h4>Responsive Flat Page PSD conversion</h4>
+                <p>HTML &bull; CSS &bull; Sass &bull; JavaScript</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis nulla aspernatur deleniti necessitatibus laudantium mollitia. Adipisci eaque distinctio fuga odit cumque neque repudiandae, consequatur optio necessitatibus doloremque ab mollitia. Unde.</p>
+            </div>
+        </div>
+
+        <div class="work">
+            <a href="#" class="work__image bg3">
+                <i class="fas fa-link"></i>
+            </a>
+            <div class="work__content">
+                <h4>We are world</h4>
+                <p>HTML &bull; CSS &bull; React &bull; JavaScript</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis nulla aspernatur deleniti necessitatibus laudantium mollitia.</p>
+            </div>
+        </div>
+
+        <div class="work">
+            <a href="#" class="work__image bg1">
+                <i class="fas fa-link"></i>
+            </a>
+            <div class="work__content">
+                <h4>Memory Card Game</h4>
+                <p>HTML &bull; CSS &bull; JavaScript</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis nulla aspernatur deleniti necessitatibus laudantium mollitia. Adipisci eaque distinctio fuga odit cumque.</p>
+            </div>
+        </div>
+        <div class="socials">
+            <a href="#"><i class="fab fa-codepen"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
     </div>
+    <div class="contact">
+        <form>
+            <div class="form">
+                <label class="form__input" for="name">Name</label>
+                <div class="input form__input">
+                    <input type="text" id="name">
+                </div>
+
+                <label class="form__input" for="company">Company Name</label>
+                <div class="input form__input">
+                    <input type="text" id="company">
+                </div>
+
+                <label class="form__input" for="message">Message</label>
+                <textarea class="form__input" id="message" cols="30" rows="10" resize="false"></textarea>
+
+                <button class="submit" type="button">Submit</button>
+                <button class="cancel" type="button" class="cancel">Cancel</button>
+            </div>
+            <div class="message">
+                <h3>Thank You!</h3>
+                <p>Thank you for taking time from you busy schedule to view my site. <br> Will get back to you ASAP.</p>
+                <button class="cancel" type="button">Close</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="assets/scripts/anime.3.0.0-alpha.js"></script>
+    <script src="assets/scripts/main.js"></script>
 </body>
 </html>
