@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Superdrone</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+    <svg class="hidden">
+        <symbol id="icon-menu" viewBox="0 0 384.97 384.97">
+            <title>menu</title>
+            <path d="M12.03,84.212h360.909c6.641,0,12.03-5.39,12.03-12.03c0-6.641-5.39-12.03-12.03-12.03H12.03
+			C5.39,60.152,0,65.541,0,72.182C0,78.823,5.39,84.212,12.03,84.212z"/>
+		    <path d="M372.939,180.455H12.03c-6.641,0-12.03,5.39-12.03,12.03s5.39,12.03,12.03,12.03h360.909c6.641,0,12.03-5.39,12.03-12.03
+			S379.58,180.455,372.939,180.455z"/>
+		    <path d="M372.939,300.758H12.03c-6.641,0-12.03,5.39-12.03,12.03c0,6.641,5.39,12.03,12.03,12.03h360.909
+			c6.641,0,12.03-5.39,12.03-12.03C384.97,306.147,379.58,300.758,372.939,300.758z"/>
+        </symbol>
+        <symbol id="icon-arrow" viewBox="0 0 268.832 268.832">
+            <title>arrow</title>
+            <path d="M265.171 125.577l-80-80c-4.881-4.881-12.797-4.881-17.678 0-4.882 4.882-4.882 12.796 0 17.678l58.661 58.661H12.5c-6.903 0-12.5 5.597-12.5 12.5 0 6.902 5.597 12.5 12.5 12.5h213.654l-58.659 58.661c-4.882 4.882-4.882 12.796 0 17.678 2.44 2.439 5.64 3.661 8.839 3.661s6.398-1.222 8.839-3.661l79.998-80c4.882-4.882 4.882-12.796 0-17.678z"/>
+        </symbol>
+        <symbol id="icon-cart" viewBox="0 -31 512.00026 512">
+            <title>cart</title>
+            <path d="m164.960938 300.003906h.023437c.019531 0 .039063-.003906.058594-.003906h271.957031c6.695312 0 12.582031-4.441406 14.421875-10.878906l60-210c1.292969-4.527344.386719-9.394532-2.445313-13.152344-2.835937-3.757812-7.269531-5.96875-11.976562-5.96875h-366.632812l-10.722657-48.253906c-1.527343-6.863282-7.613281-11.746094-14.644531-11.746094h-90c-8.285156 0-15 6.714844-15 15s6.714844 15 15 15h77.96875c1.898438 8.550781 51.3125 230.917969 54.15625 243.710938-15.941406 6.929687-27.125 22.824218-27.125 41.289062 0 24.8125 20.1875 45 45 45h272c8.285156 0 15-6.714844 15-15s-6.714844-15-15-15h-272c-8.269531 0-15-6.730469-15-15 0-8.257812 6.707031-14.976562 14.960938-14.996094zm312.152343-210.003906-51.429687 180h-248.652344l-40-180zm0 0"/><path d="m150 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/><path d="m362 405c0 24.8125 20.1875 45 45 45s45-20.1875 45-45-20.1875-45-45-45-45 20.1875-45 45zm45-15c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"/>
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 47.971 47.971">
+            <title>close</title>
+            <path d="M28.228,23.986L47.092,5.122c1.172-1.171,1.172-3.071,0-4.242c-1.172-1.172-3.07-1.172-4.242,0L23.986,19.744L5.121,0.88
+		    c-1.172-1.172-3.07-1.172-4.242,0c-1.172,1.171-1.172,3.071,0,4.242l18.865,18.864L0.879,42.85c-1.172,1.171-1.172,3.071,0,4.242
+		    C1.465,47.677,2.233,47.97,3,47.97s1.535-0.293,2.121-0.879l18.865-18.864L42.85,47.091c0.586,0.586,1.354,0.879,2.121,0.879
+		    s1.535-0.293,2.121-0.879c1.172-1.171,1.172-3.071,0-4.242L28.228,23.986z"/>
+        </symbol>
+    </svg>
+    <header>
+        <nav class="mobile">
+            <a href="#" class="logo">Superdrone.</a>
+            <div class="desktop">
+                <a href="#">Meet the product</a>
+                <a href="#">Meet the company</a>
+                <a href="#">Support</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="login">
+                <div class="cart">
+                    <svg class="icon"><use xlink:href="#icon-cart"></use></svg>
+                    <span class="cart-count">0</span>
+                </div> 
+                <a href="#" class="slick">login</a>
+                <div class="cart-checkout">
+                    <div class="cart-header">
+                        <h3>Checkout</h3>
+                        <a href="#"><svg class="icon"><use xlink:href="#icon-close"></use></svg></a>
+                    </div>
+                    <table>
+                        <thead>
+                            <th>Your Product</th>
+                            <th>Price</th>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td class="total-cost">R 00.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <button type="button" class="slick">Checkout</button>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="#" class="menu-icon"><svg class="icon"><use xlink:href="#icon-menu"></use></svg></a>
+                <div class="mobile__aside">
+                    <a href="#" class="close-icon"><svg class="icon"><use xlink:href="#icon-close"></use></svg></a>
+                    <ul>
+                        <li><a href="#">Meet the product</a></li>
+                        <li><a href="#">Meet the company</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><p>Cart <span class="cart-count">0</span></p></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="content">
+                <h1 class="header__title">Your reciptionist anywhere</h1>
+                <p>When a user taps on a button in a mobile app, and a button pulls down a navigation. Thats's a microinteraction</p>
+                <a href="#" class="slick">Buy now</a>
+            </div>
+        </div>
+        <svg class="scroll" iewBox="0 0 22.41 17.82">
+            <polyline points="1 1 11.66 10.18 22.41 1" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+            <polyline points="1 8.64 11.66 17.82 22.41 8.64" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+        </svg>
+    </header>
+    <section id="about">
+        <div class="container">
+            <div class="content">
+                <h2 class="section__title">Super Light Drone</h2>
+                <p>More specifically, microinteractions are the animation and changes of the interface that happen once a user interacts with somethin, anything. Consider them interactive but informative animation. There are many reasons to use microinteractions. We can give you four [4] right now.</p>
+                <p>The first good thing about microinteractions is improved usability. If the animation of the menu, from the example We gave about, slides down and over the content the user was just looking at it, it provides affirmation for the user. This animation lets the know what's going on through visual cues.</p>
+                <a href="#" class="slick">Read more</a>
+            </div>
+            <img src="img/droneRight.png" alt="Drone">
+        </div>
+    </section>
+    <section id="video">
+        <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 469.84 469.84">
+                    <title>play</title>
+                    <g id="outer_circle">
+                        <circle cx="234.92" cy="234.92" r="233.42" style="fill:none;stroke:#fff;stroke-linejoin:round;stroke-width:3px"/>
+                    </g>
+                    <g id="inner_circle">
+                        <circle cx="234.92" cy="234.92" r="88.33" style="fill:#fff"/>
+                    </g>
+                    <g id="play">
+                        <polygon points="293.19 234.92 210.66 187.27 210.66 282.57 293.19 234.92" style="fill:#231f20"/>
+                    </g>
+                </svg>
+        </a>
+        <img src="img/demoVideo2.jpg" alt="Demo Video">
+    </section>
+    <section id="service" class="borderBottom">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title center">Super Services</h2>
+                <p class="section_kicker">The first good thing about microinteractions is improved usability. If the animation of the menu, from the example We gave about, slides down and over the content the user was just looking at it, it provides affirmation for the user.</p>
+            </div>
+            <div class="services">
+                <div class="service">
+                    <img src="img/icon-1.png" alt="icon" class="service__icon">
+                    <h3 class="service__title">4K Resolution</h3>
+                    <p>More specifically, microinteractions are the animation and changes of the interface that happen once a user interacts with somethin, anything. Consider them interactive but informative animation. There are many reasons to use microinteractions. We can give you four [4] right now.</p>
+                </div>
+                <div class="service">
+                    <img src="img/icon-2.png" alt="icon" class="service__icon">
+                    <h3 class="service__title">Timelapse</h3>
+                    <p>More specifically, microinteractions are the animation and changes of the interface that happen once a user interacts with somethin, anything. Consider them interactive but informative animation. There are many reasons to use microinteractions. We can give you four [4] right now.</p>
+                </div>
+                <div class="service">
+                    <img src="img/icon-3.png" alt="icon" class="service__icon">
+                    <h3 class="service__title">Super speed</h3>
+                    <p>More specifically, microinteractions are the animation and changes of the interface that happen once a user interacts with somethin, anything. Consider them interactive but informative animation. There are many reasons to use microinteractions. We can give you four [4] right now.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="spec">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title center">The first world's seamless drone with a very lightweight hull and high travel speed</h2>
+                <p class="section_kicker">The V360 camera allows you to masterfully capture the whole story with a premium 360 camera for limitless creating</p>
+            </div>
+            <img src="img/drone-full.png" alt="Drone" class="full">
+            <img src="img/droneLeft.png" alt="Drone" class="half">
+            <ul class="specifications">
+                <li>
+                    <p>Length<span>90 mm</span></p>
+                </li>
+                <li>
+                    <p>Main screw diameter<span>40 mm</span></p>
+                </li>
+                <li>
+                    <p>Battery<span>180 ma * h</span></p>
+                </li>
+                <li>
+                    <p>Flight time<span>7' min</span></p>
+                </li>
+                <li>
+                    <p>Radius of action of equipment<span>50 m</span></p>
+                </li>
+                <li>
+                    <p>Receiver<span>2.4 ghz</span></p>
+                </li>
+                <li>
+                    <p>Receiver included<span>yes</span></p>
+                </li>
+                <li>
+                    <p>Transmitter<span>2.4 ghz, 4 channels</span></p>
+                </li>
+                <li>
+                    <p>Transmitter included<span>yes</span></p>
+                </li>
+                <li>
+                    <p>Gyroscope<span>6-axis</span></p>
+                </li>
+                <li>
+                    <p>Color of the fuselage<span>black</span></p>
+                </li>
+                <li>
+                    <p>Need to buy<span>4 x aaa batteries</span></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="gallery">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title center">Mount to anything, Anywhere.</h2>
+                <p class="section_kicker">Fully compatible with GoPro&copy; mounts, traditional cameras and tripod designs with a built in 1/4 &mdash; 20 UNC tripod housing, we're made to mount anything. From helmets to handlebars, we go where you go.</p>
+            </div>
+            <div class="gallery">
+                <button type="button">
+                    <svg class="icon turn">
+                        <use xlink:href="#icon-arrow"></use>
+                    </svg>
+                </button>
+                <button type="button" class="right">
+                        <svg class="icon">
+                            <use xlink:href="#icon-arrow"></use>
+                        </svg>
+                    </button>
+                <img src="img/dronGall1.png" alt="Drone">
+            </div>
+        </div>
+    </section>    
+    <section id="rent" class="borderBottom">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title center">We Rent The Best Drones</h2>
+                <p class="section_kicker">If you are looking for a portable drone, or a pro tool. We have the drone for you!</p>
+            </div>
+            <div class="drones">
+                <div class="drone">
+                    <img src="img/postDrone1.png" alt="Drone Post">
+                    <p class="drone__model">jxd 512w 90</p>
+                    <p class="drone__price">R 299</p>
+                    <a href="#" class="slick" data-product="jxd 512w 90" data-price="299">Add to cart</a>
+                </div>
+                <div class="drone">
+                    <img src="img/postDrone2.png" alt="Drone Post">
+                    <p class="drone__model">dji phantom 4 pro+</p>
+                    <p class="drone__price">R 399</p>
+                    <a href="#" class="slick" data-product="dji phantom 4 pro+" data-price="399">Add to cart</a>
+                </div>
+                <div class="drone">
+                    <img src="img/postDrone3.png" alt="Drone Post">
+                    <p class="drone__model">Skytech m62 2.4 ghz</p>
+                    <p class="drone__price">R 599</p>
+                    <a href="#" class="slick" data-product="Skytech m62 2.4" data-price="599">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="links">
+                <a href="#">Terms &amp; Conditions</a>
+                <a href="#">Licence agreement</a>
+                <a href="#">Private Policy</a>
+            </div>
+            <p>All right reserved &copy; 2018</p>
+        </div>
+    </footer>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/debug.addIndicators.min.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
