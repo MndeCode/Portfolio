@@ -363,20 +363,20 @@
 			</div>
 			<div class="subsection">
 				<h2 class="subsection__title">Contact</h2>
-				<form>
+				<form name="contact" method="POST" data-netlify="true">
 					<div class="input">
 						<label for="name">Full Name</label>
-						<input type="text" id="name">
+						<input type="text" id="name" name="name">
 					</div>
 					<div class="input">
 						<label for="company">Company / Organisation</label>
-						<input type="text" id="company">
+						<input type="text" id="company" name="company">
 					</div>
 					<div class="input">
 						<label for="message">How can I help?</label>
-						<textarea id="message" cols="30" rows="10"></textarea>
+						<textarea id="message" cols="30" rows="10" name="message"></textarea>
 					</div>
-					<button>Send</button>
+					<button type="submit">Send</button>
 				</form>
 			</div>
 		</section>
