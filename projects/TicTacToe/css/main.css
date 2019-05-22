@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    position: relative;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    --primary: #c34b4b;
+    --secondary: #9d1f1f;
+    background: radial-gradient(var(--primary), var(--secondary));
+    overflow: hidden;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: 350px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.board.stroke::before {
+    /* calc(((350px / 3) * 3) - ((350px / 3) / 2)) */
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 494.97px;
+    transform-origin: 0 50%;    
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+    background-color: #a32323;
+    z-index: 1;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell::before,
+.cell::after {
+    content: '';
+    position: absolute;    
+}
+
+.leftB::before,
+.leftA::after {
+    left: -1px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.rightB::before,
+.rightA::after {
+    right: -1px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+}
+
+.topB::before,
+.topA::after {
+    left: 0;
+    top: -1px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+.bottomB::before,
+.bottomA::before {
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+p.put {
+    margin: 0;
+    display: block;
+    text-transform: uppercase;
+    background-color: #fff;
+    font-family: 'Papyrus', comic;
+    width: 70px;
+    height: 70px;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 0 10px 3px  rgba(0, 0, 0, .35)
+}
